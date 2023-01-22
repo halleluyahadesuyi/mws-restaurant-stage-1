@@ -20,8 +20,8 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
-      <div id="map" role="application" aria-describedby="map-description"></div>
+    <section id="map-container" role="application" aria-describedby="map-description">
+      <div id="map"></div>
     </section>
     
     <label id="map-description" class="map-description">Mapbox Map</label>
@@ -31,13 +31,13 @@
         <h2>Filter Results</h2>
 
         <div class="filter-selection">
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-labelledby="neighborhoods-label">
             <option value="all">All Neighborhoods</option>
           </select>
 
           <label id="neighborhoods-label" class="filter-label">by all the neighborhoods</label>
 
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-labelledby="cuisines-label">
             <option value="all">All Cuisines</option>
           </select>
 
